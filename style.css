@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Hanken Grotesk", Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 750px;
+    height: 500px;
+    overflow: hidden;
+    box-shadow: 0px 20px 90px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 40px;
+}
+
+.left {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    padding: 30px 50px;
+    border-radius: 40px;
+    color: hsl(241, 100%, 89%);
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-height: 500px;
+}
+
+.result {
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 40px 0;
+}
+
+.score {
+    font-size : 75px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.note {
+    font-weight: 800;
+    font-size: 30px;
+    color: #fff;
+}
+
+p {
+    margin-top: 10px;
+    font-size: 19px;
+}
+
+.right {
+    padding: 30px 50px;
+    color: hsl(224, 30%, 27%);
+    font-size: 18px;
+    max-height: 500px;
+}
+
+.header {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    height: 60px;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    color: hsl(224, 52%, 68%);
+    border-radius: 10px;
+}
+
+b {
+    color: hsl(224, 30%, 27%)
+}
+
+img {
+    margin-bottom: -3px;
+}
+
+.reaction {
+    background: hsla(0, 100%, 67%, 0.05);
+}
+
+.reaction span:first-of-type {
+    color: hsl(0, 100%, 67%);
+}
+
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.05);
+}
+
+.memory span:first-of-type {
+    color: hsl(39, 100%, 56%);
+}
+
+.verbal {
+    background-color: hsla(166, 100%, 37%, 0.05);
+}
+
+.verbal span:first-of-type {
+    color: hsl(166, 100%, 37%);
+}
+
+.visual {
+    background-color: hsla(234, 85%, 45%, 0.05);
+}
+
+.visual span:first-of-type {
+    color: hsl(234, 85%, 45%);
+}
+
+.button {
+    background: hsl(224, 30%, 27%);
+    color: #fff;
+    height: 60px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin-top: 40px;
+}
+
+.button:hover {
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    cursor: pointer;
+}
+
+.attribution { 
+    font-size: 14px;
+    text-align: center;
+    position: fixed;
+    bottom: -40px;
+    width: 100%;
+    height: 40px;
+    transition: bottom .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #29007052;
+    color: #fff;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+}
+
+.attribution:hover, body:hover .attribution{
+    bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+        grid-template-columns: 1fr;
+        height: 90%;
+        width: 80%;
+    }
+    .left {
+        padding: 20px 50px;
+    }
+
+    .circle {
+        margin: 20px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .card {
+        height: 100vh;
+        width: 100vw;
+        border-radius: revert;
+    }
+
+    .left {
+        border-radius: 0 0 40px 40px;
+        padding:20px 50px 30px;
+    }
+
+    .result {
+        font-size: 22px;
+    }
+
+    .note {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .score {
+        font-size: 65px;
+    }
+
+    .right {
+        padding:20px 30px;
+        font-size: 16px;
+
+    }
+
+    .header {
+        font-size: 18px;
+    }
+
+    li {
+        margin: 15px 0;
+    }
+
+    img {
+        margin-right: 10px;
+    }
+
+    .button {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+}
